@@ -1,0 +1,139 @@
+type Query {
+  messages(chatBoxName: String): [Message!]
+  friends(username: String!): [FriendsInfoPayload!]
+  letters(attr1: String!, attr2: String!, attr3: String!): Letter!
+  tmpattr(username: String!): AttrPayload!
+}
+
+type Mutation {
+  login(username: String, password: String): AuthPayload!
+  signUp(username: String, password: String): AuthPayload!
+  createChatBox(name1: String, name2: String): CreateChatBoxPayload!
+  createMessage(
+    from: String
+    to: String
+    message: String
+  ): CreateMessagePayload!
+  makefriend(name1: String, name2: String): FriPayload!
+  saveattribute(
+    username: String
+    content: String
+    title: String
+    tex: String
+    art1: String
+    art2: String
+    art3: String
+  ): SaveAttrPayload!
+  createletter(username: String): CreateLetterPayload!
+}
+
+type Subscription {
+  message(chatBoxName: String): MessageSubscriptionPayload!
+  friend(username1: String, username2: String): FriendSubscriptionPayload!
+}
+
+type AuthPayload {
+  status: AuthType!
+  message: String!
+}
+
+type FriPayload {
+  status: AuthType!
+  message: String!
+}
+
+type CreateChatBoxPayload {
+  response: AuthPayload!
+  chatBox: ChatBox
+}
+
+type CreateMessagePayload {
+  response: AuthPayload!
+  message: Message!
+}
+
+type CreateLetterPayload {
+  status: AuthType!
+  message: String!
+}
+
+type SaveAttrPayload {
+  status: AuthType!
+  message: String!
+}
+
+type AttrPayload {
+  content: String
+  title: String
+  texture: String
+  attr1: String
+  attr2: String
+  attr3: String
+}
+enum AuthType {
+  Success
+  Failed
+}
+
+type MessageSubscriptionPayload {
+  mutation: MutationType!
+  message: Message!
+}
+
+type FriendSubscriptionPayload {
+  mutation: MutationType!
+  lastmsg: Message!
+}
+enum MutationType {
+  CREATED
+  UPDATED
+  DELETED
+}
+
+type FriendsInfoPayload {
+  friendName: String!
+  lastmsg: Message!
+}
+
+type ChatBox {
+  id: ID!
+  name: String!
+  messages: [Message!]
+}
+
+type Message {
+  id: ID!
+  sender: User!
+  body: String!
+  timestamp: String!
+}
+
+type User {
+  id: ID!
+  username: String!
+  friends: [String!] #或許可刪
+  lastmsg: [String!] #或許可刪
+  content: String
+  title: String
+  texture: String
+  art1: String
+  art2: String
+  art3: String
+}
+
+# input attrs {
+#   attr1: String!
+#   attr2: String!
+#   attr3: String!
+# }
+
+type Letter {
+  id: ID!
+  sender: User!
+  title: String!
+  content: String!
+  texture: String!
+  attr1: String!
+  attr2: String!
+  attr3: String!
+}

@@ -1,0 +1,192 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.write{
+  animation: lightup 3s ease;
+  text-align: center;
+  vertical-align: middle;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logo {
+  height: 50px;
+  margin-top: 30px;
+  margin-bottom: 80px;
+  color: cadetblue;
+  text-align: center;
+  vertical-align:middle;
+  border: #282c34 20px;
+}
+
+.cover{
+  padding: 7vmin;
+}
+
+.material_pair{
+  flex : none;
+  margin-right: 3vw;
+}
+
+.material_pair :hover{
+  cursor: pointer;
+}
+
+.material{
+  height: 10vmin;
+  width: 10vmin;
+}
+
+.material_des{
+  height: 5vmin;
+  width: 10vmin;
+  text-align: center;
+}
+
+.done_create{
+  display: flex;
+}
+
+.step{
+  margin-left: 40px;
+}
+
+.ant-steps-item-finish > .ant-steps-item-container 
+> .ant-steps-item-content > .ant-steps-item-title{
+  color: wheat !important;
+}
+
+.ant-steps-item-finish > .ant-steps-item-container 
+> .ant-steps-item-content > .ant-steps-item-description{
+  color: white !important;
+}
+
+.ant-steps-item-process > .ant-steps-item-container
+ > .ant-steps-item-content > .ant-steps-item-title{
+  color: wheat !important;
+ }
+
+ .ant-steps-item-process > .ant-steps-item-container 
+ > .ant-steps-item-content > .ant-steps-item-description{
+   color: white !important;
+ }
+
+ .ant-steps-item-wait > .ant-steps-item-container 
+ > .ant-steps-item-content > .ant-steps-item-title{
+  color: wheat !important;
+ }
+
+ .ant-steps-item-wait > .ant-steps-item-container 
+ > .ant-steps-item-content > .ant-steps-item-description{
+  color: white !important;
+ }
+
+.step1{
+  margin-left: 5vw;
+  margin-top: 3vh;
+  color:rgb(65, 172, 136)
+}
+
+.step2{
+  margin-top: 3vh;
+}
+
+.step3{
+  margin-top: 3vh;
+}
+
+.step4{
+  margin-top: 3vh;
+  margin-right: 5vw;
+}
+
+.send_buttom{
+  margin-left: 52px;
+  margin-top: 1vh;
+  width: 78vw;
+}
+
+.site-layout-sub-header-background {
+  background: #fff;
+  height: 30vh;
+}
+
+.site-layout-background {
+  background: #fff;
+  margin-left: 7vw;
+  margin-top: 7vh;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  vertical-align: top;
+  padding:26px;
+  line-height: 25px;
+}
+  [data-theme="dark"] .site-layout-sub-header-background {
+    background: #141414;
+  }
+.upload{
+  width: 60vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:10vh;
+  margin-bottom: 5vh;
+}
+
+.final{
+  padding: 5vmin;
+  display: flex;
+  flex-direction: row;
+}
+
+.ant-card-head-title{
+  font-size: 25px;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 2vh;
+  line-height: 3;
+}
+
+.ant-menu-item{
+  background-color: initial;
+  margin-right: 12vw !important;
+  padding: 5vmin;
+}
+
+.sider{
+  width: 300px !important;
+}

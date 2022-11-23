@@ -1,0 +1,71 @@
+.ant-form-item-required {
+  color: azure !important;
+}
+
+.ant-checkbox-wrapper {
+  color: azure !important;
+}
+
+.App-logo {
+  height: 17vmin;
+  pointer-events: none;
+  margin-top: -10vh;
+}
+
+.mainpage {
+  min-width: 100vw;
+  min-height: 100vh;
+  animation: lightup 5s ease;
+  text-align: center;
+  vertical-align: middle;
+}
+
+@keyframes lightup {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.blocks {
+  display: flex;
+  margin: auto;
+  width: 80vw;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.block {
+  height: 50vh;
+  width: 20vw;
+  border-radius: 3vmin;
+  background-color: rgb(218, 212, 206);
+  margin: auto;
+  font-size: larger;
+  font-family: cursive;
+  color: black;
+  text-align: center;
+  line-height: 16vh;
+  transition: all 0.8s ease-in-out;
+}
+
+.block:hover {
+  transform: scale(1.05);
+}
+
+
+.ask {
+  color: blanchedalmond !important;
+}
+
+.ask:hover {
+  text-decoration: underline;
+}
+
+
